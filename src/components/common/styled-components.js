@@ -96,10 +96,7 @@ const buttonStyles = css `
   `};
 `;
 
-export const Button = styled.div.attrs({
-  className: 'kg-button'
-})
-`
+export const Button = styled.div.attrs({className: 'kg-button'})`
   ${buttonStyles};
 `;
 

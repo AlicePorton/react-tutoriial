@@ -48,12 +48,12 @@ export const SECTIONS = [{
     icon: cdnUrl('icons/examples.png'),
     background: cdnUrl('examples/section-background.png')
   },
-  {
-    id: 'tutorials',
-    title: 'Getting Started',
-    description: 'Get started with tutorials created by our team.',
-    icon: cdnUrl('icons/tutorials.png')
-  }
+  // {
+  //   id: 'tutorials',
+  //   title: 'Getting Started',
+  //   description: 'Get started with tutorials created by our team.',
+  //   icon: cdnUrl('icons/tutorials.png')
+  // }
 ];
 
 export const HERO_IMAGES = [

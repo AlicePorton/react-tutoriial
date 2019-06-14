@@ -14,8 +14,9 @@ const CardsContainer = styled.div`
   margin-bottom: ${props => props.theme.margins.large};
   ${media.palm`
     display: block;
-  `}
-`
+  `};
+`;
+
 const StyledCardContainer = styled.a `
   display: block;
   margin: ${props => props.theme.margins.small};
@@ -45,7 +46,7 @@ class Examples extends PureComponent {
   render() {
     return (
       <div>
-        <StaggeredScrollAnimation container={CardsContainer}>
+        <StaggeredScrollAnimation Container={CardsContainer}>
           {EXAMPLES.map(({title, description, image, url}, i) => (
             <CardContainer linkUrl={url} key={`emaple-${i}`}>
               <VerticalCard
