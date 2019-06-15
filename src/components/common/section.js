@@ -13,7 +13,7 @@ export const SectionIcon = styled.img`
 `;
 
 export const SectionContainer = styled.div`
-  color: ${props => (props.idDark ? 'white': 'black')};
+  color: ${props => (props.isDark ? 'white': 'black')};
   background: ${props => 
     props.isDark
       ? props.theme.darkBackgroundColor

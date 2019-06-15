@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {Waypoint} from 'react-waypoint';
 
 
-const FadeIn = styled.div `
+const FadeIn = styled.div`
   opacity: ${props => (props.isVisible ? '1.0': '0.0')};
   transform: ${props => (props.isVisible ? undefined : 'translateY(10px)')};
   transition: ${props => 
-    `opacity 350ms ${props.delay}ms, transform 350ms ${props.delay} ms`};
+    `opacity 350ms ${props.delay}ms, transform 350ms ${props.delay}ms`};
 `;
 
 export default class StaggeredScrollAnimation extends PureComponent {

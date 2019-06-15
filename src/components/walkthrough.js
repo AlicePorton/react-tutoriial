@@ -22,7 +22,7 @@ const VideoContainer = styled.div`
     width: 500px;
   `}
   ${media.palm`
-    width: 100%:
+    width: 100%;
   `};
 
   video {

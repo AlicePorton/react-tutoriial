@@ -8,19 +8,19 @@ export const breakPoints = {
 };
 
 export const media = {
-  palm: (...args) => css `
+  palm: (...args) => css`
     @media (max-width: ${breakPoints.palm}px) {
       ${css(...args)};
     }
   `,
 
-  portable: (...args) => css `
+  portable: (...args) => css`
     @media (max-width: ${breakPoints.desk}px) {
       ${css(...args)};
     }
   `,
 
-  desk: (...args) => css `
+  desk: (...args) => css`
     @media (min-width: ${breakPoints.desk + 1}px) {
       ${css(...args)};
     }

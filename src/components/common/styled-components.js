@@ -5,7 +5,7 @@ import {
   media
 } from '../../styles';
 
-const buttonStyles = css `
+const buttonStyles = css`
   align-items: center;
   background-color: ${props =>
     props.negative
@@ -100,12 +100,12 @@ export const Button = styled.div.attrs({className: 'kg-button'})`
   ${buttonStyles};
 `;
 
-export const LinkButton = styled.a `
+export const LinkButton = styled.a`
   color: black;
   ${buttonStyles};
 `;
 
-export const CenteredContent = styled.div `
+export const CenteredContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
