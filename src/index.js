@@ -14,6 +14,9 @@ import Walkthrough from "./components/walkthrough";
 
 import Hero from './components/hero';
 import styled from 'styled-components';
+
+import Introduction from './components/first-page/introduction';
+import Website from './website/index';
 // ========================================
 const SECTION_CONTENT = {
   examples: Examples,
@@ -77,13 +80,16 @@ class App extends Component {
               )
             }
           )}
+        <Introduction></Introduction>
         </IndexContainer>
+
       </ThemeProvider>
     )
   }
 }
 ReactDOM.render(
   // <Game />,
-  <App />,
+  // <App />,
+  <Website></Website>,
   document.getElementById('root')
 );
