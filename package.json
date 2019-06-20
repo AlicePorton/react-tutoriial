@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.1.1",
+    "classnames": "^2.2.6",
     "d3-array": "^2.2.0",
     "d3-geo": "^1.11.3",
     "d3-scale": "^3.0.0",
@@ -13,8 +14,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-map-gl": "^5.0.3",
+    "react-onclickoutside": "^6.8.0",
     "react-scripts": "3.0.1",
     "react-swipeable-views": "^0.13.3",
+    "react-tooltip": "^3.10.0",
     "react-waypoint": "^9.0.2",
     "styled-components": "^4.3.1"
   },

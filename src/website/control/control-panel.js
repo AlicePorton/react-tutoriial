@@ -76,7 +76,6 @@ export default class StyleControls extends PureComponent {
             View Code ↗
           </a>
         </div>
-        <hr />
         <p>Clickable layers</p>
         {Object.keys(layerSelector).map(name => this._renderLayerControl(name))}
       </Container>

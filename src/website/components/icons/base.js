@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ *  格式化样色种类，输入（4,['red', 'gray'])
+ *  得到 .cr1 {fill: red}.cr2 {fill: gray}.cr3{fill:red}...
+ * @param {number} totalColor 颜色个数
+ * @param {Array} colors 颜色种类
+ */
 const getStyleClassFromColor = (totalColor, colors) => 
   new Array(totalColor)
     .fill(1)
@@ -18,7 +24,7 @@ export default class Base extends Component {
     viewBox: PropTypes.string,
     children: PropTypes.node,
 
-    predefindClassName: PropTypes.string,
+    predefinedClassName: PropTypes.string,
     className: PropTypes.string
   };
 
@@ -37,7 +43,7 @@ export default class Base extends Component {
       viewBox,
       style = {},
       children,
-      predefindClassName,
+      predefinedClassName,
       className,
       colors,
       totalColor,
@@ -58,7 +64,7 @@ export default class Base extends Component {
         width={svgWidth}
         height={svgHeight}
         style={style}
-        className={`${predefindClassName} ${className}`}
+        className={`${predefinedClassName} ${className}`}
         {...props}
       >
         {fillStyle ? 

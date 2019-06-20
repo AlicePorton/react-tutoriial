@@ -12,7 +12,9 @@ import CITIES from '../data/cities.json';
 import ZIPCODES_SF from "../data/feature-example-sf.json";
 
 import ControlPanel from '../control/control-panel';
+import CustomSideBar from "./sidepanel/custom-sidebar";
 
+import Icons from './icons/icons_spec';
 
 const TOKEN = 'pk.eyJ1IjoiYWVzcWUiLCJhIjoiY2lmNGVxYnNnMDNrenJya2xzbmQ4M281bCJ9.GfMJ8R2NX1dDcc9Hs2PO3A'
 
@@ -48,8 +50,9 @@ class Map extends Component {
   render() {
     return (
       <MapContainer>
+        <CustomSideBar />
         <ReactMapGL
-          mapStyle="mapbox://styles/mapbox/dark-v9"
+          mapStyle="mapbox://styles/mapbox/light-v9"
           mapboxApiAccessToken={TOKEN}
           {...this.state.viewport}
           onViewportChange={viewport => this.setState({ viewport })}>
@@ -57,7 +60,6 @@ class Map extends Component {
             containerComponent={this.props.containerComponent}
             onChange={this._onInteractiveLayersChange}
           />
-          
           <GeolocateControl
             positionOptions={{ enableHighAccuracy: true }}
             trackUserLocation={true}
