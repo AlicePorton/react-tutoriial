@@ -17,6 +17,10 @@ export const theme = {
   subtextColor: '#6A7485',
   // textColorHl: '#2473bd',
 
+  // **panel-header-action**
+    // textColorHl: "#2473bd",
+  panelHeaderIconActive: '#A0A784',
+  // panelHeaderIcon: "#6A7485",
 
   labelColor: "#D0D0D0",
   mapBackground: "#0D1823",

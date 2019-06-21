@@ -5,27 +5,20 @@ import styled from 'styled-components';
 import {Tooltip} from '../common/style-components';
 
 
-const theme = {
-  textColorHl: "#2473bd",
-  panelHeaderIconActive: '#A0A784',
-  panelHeaderIcon: "#6A7485"
-};
-
-
 const HeaderActionWrapper = styled.div`
   margin-left: ${props => (props.flush ? 0: 8)}px;
   display: flex;
   align-items: center;
   color: ${props =>
     props.active
-      ? theme.panelHeaderIconActive
-      : theme.panelHeaderIcon};
+      ? props.theme.panelHeaderIconActive
+      : props.theme.panelHeaderIcon};
   :hover {
     cursor: pointer;
     color: ${props => 
       props.hoverColor
         ? props.theme[props.hoverColor]
-        : theme.textColorHl}
+        : props.theme.textColorHl}
   }
 
   &.disabled {
