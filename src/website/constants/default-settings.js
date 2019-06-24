@@ -1,4 +1,4 @@
-import {Layers, FilterFunnel, CursorClick, Settings} from '../components/icons';
+import {Layers, FilterFunnel, CursorClick, Settings, Address} from '../components/icons';
 export const DIMENSIONS = {
   sidePanel: {
     width: 300,
@@ -12,7 +12,7 @@ export const DIMENSIONS = {
 }
 
 export const NAME = 'TEST'
-export const VERSION = '0.1'
+export const VERSION = '0.1.0'
 export const WEBSITE = 'test'
 
 export const PANELS = [
@@ -35,6 +35,11 @@ export const PANELS = [
     id: "map",
     label: "Base map",
     iconComponent: Settings
+  },
+  {
+    id: "address",
+    label: "Address",
+    iconComponent: Address
   }
 ];
 

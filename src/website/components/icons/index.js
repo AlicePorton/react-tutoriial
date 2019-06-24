@@ -12,6 +12,13 @@ export {default as Layers} from './layers';
 export {default as FilterFunnel} from './filter-funnel';
 export {default as CursorClick} from './cursor-click';
 export {default as Settings} from './settings';
+export {default as Address} from './address';
+
+// --------------ChickletInput
+export {default as Delete} from './delete';
+
+// --------------Typeahead
+export {default as Search} from './search'
 
 
 
