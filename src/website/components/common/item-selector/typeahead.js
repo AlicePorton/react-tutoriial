@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import styled from 'styled-components';
 import {console as Console} from 'global/window';
 
@@ -131,16 +131,20 @@ export default class Typeahead extends Component {
     };
   }
 
+  focusOnTarget() {
+    if (this.entry) {
+      this.entry.focus();
+    } else {
+      this.root.focus();
+    }
+  }
+
   componentDidMount() {
     this.setState({
       searchResults: this.getOptionsForValue('', this.props.options)
     });
 
-    if(this.entry) {
-      this.entry.focus();
-    } else {
-      this.root.focus();
-    }
+    this.focusOnTarget();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -168,6 +172,7 @@ export default class Typeahead extends Component {
     }
 
     const searchOptions = this._generateSearchFunction();
+    
     return searchOptions(value, options);
   }
 
@@ -395,17 +400,17 @@ export default class Typeahead extends Component {
         options.filter(o => filterOptionProp(value, o));
       }
     }
-
+    
     const mapper = 
       typeof filterOptionProp === 'string'
         ? Accessor.generateAccessor(filterOptionProp)
         : Accessor.IDENTITY_FN;
-    
-    return (value, options) => {
+   
+
+    return (value, options) =>
       fuzzy
         .filter(value, options, {extract: mapper})
         .map(res => options[res.index]);
-    }
   }
 
   _hasHint() {
@@ -423,13 +428,13 @@ export default class Typeahead extends Component {
     inputClasses[this.props.customClasses.input] = Boolean(
       this.props.customClasses.input
     );
-    const inputClassList = classNames(inputClasses);
+    const inputClassList = classnames(inputClasses);
 
     const classes = {
       [DEFAULT_CLASS]: this.props.defaultClassNames
     };
     classes[this.props.className] = Boolean(this.props.className);
-    const classList = classNames(classes);
+    const classList = classnames(classes);
 
     return (
       <TypeaheadWrapper

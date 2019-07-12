@@ -169,7 +169,7 @@ class ItemSelector extends Component {
 
     if (this.props.multiSelect) {
       const items = uniq(previousSelected.concat(_toArray(item).map(getValue)));
-      this.props.onChange(item);
+      this.props.onChange(items);
     } else {
       this.props.onChange(getValue(item));
     }
@@ -275,3 +275,5 @@ class ItemSelector extends Component {
     );
   }
 };
+
+export default ItemSelector;

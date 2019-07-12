@@ -44,7 +44,6 @@ class Map extends Component {
   };
 
   _onInteractiveLayersChange = () => {
-    console.log('t')
   }
 
   render() {

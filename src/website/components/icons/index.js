@@ -20,5 +20,7 @@ export {default as Delete} from './delete';
 // --------------Typeahead
 export {default as Search} from './search'
 
-
+// --------------FileUpload
+export {default as FileType} from './file-type'
+export {default as DragNDrop} from './drag-n-drop'
 

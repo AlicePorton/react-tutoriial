@@ -5,6 +5,8 @@ import {
 } from './components/common/card';
 import Map from './components/map';
 
+import Header from './components/tutorial/header';
+
 const GlobalStyle = styled.div`
   font-family: ff-clan-web-pro, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
@@ -18,6 +20,7 @@ const GlobalStyle = styled.div`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+
 
   ul {
     margin: 0;
@@ -35,14 +38,16 @@ const GlobalStyle = styled.div`
 class Website extends PureComponent {
   render() {
     return (
-      <GlobalStyle>
-        {/* <IntroductionCard
-          title="test"
-          description="test2"
-          linkText="linkText"
-        ></IntroductionCard> */}
-        <Map />
-      </GlobalStyle>
+      <Header>
+        <GlobalStyle>
+          {/* <IntroductionCard
+            title="test"
+            description="test2"
+            linkText="linkText"
+          ></IntroductionCard> */}
+          <Map />
+        </GlobalStyle>
+      </Header>
     )
   }
 }

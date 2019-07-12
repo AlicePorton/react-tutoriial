@@ -46,7 +46,7 @@ export default class DropdownList extends Component {
   };
 
   static defaultProps = {
-    options: ['test-1', 'test-2'],
+    options: [],
     customClasses: {},
     customListItemComponent: ListItem,
     customListHeaderComponent: null,

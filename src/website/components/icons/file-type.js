@@ -21,7 +21,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {File} from 'components/common/icons';
+import File from './file';
 
 const FileNameTag = styled.div`
   background-color: currentColor;
